@@ -4,3 +4,8 @@ other computer science topics. I mainly use the [Julia](https://julialang.org) p
 [ES] Hola, bienvenido(a) a CyberLogic. Este es mi blog personal en donde comparto mis notas acerca
 de algoritmos y otros temas relacionados a las ciencias de la computación. Principalmente uso el 
 lenguaje de programación [Julia](https://julialang.org).
+
+> If you want to set off and go develop some grand new thing, you don't need millions of dollars of
+> capitalization. You need enough pizza and Diet Coke to stick in your refrigerator, a cheap PC to
+> work on, and the dedication to go through with it.
+> -- <cite>[John D. Carmack]</cite>
