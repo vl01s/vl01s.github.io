@@ -1,0 +1,90 @@
+¿Qué es un algoritmo?
+Un algoritmo es un procedimiento con un número finito de pasos, el cual trabaja sobre una entrada y
+produce una salida. Un ejemplo cootidiano de un algoritmo es el de una receta de cocina, en la cual
+tenemos una entrada en forma de ingredientes y una salida en forma de un platillo. Sin embargo en el
+ámbito computacional clásico, la entrada y salida son ambos información codificada en forma binaria
+(representadas con ceros y unos.) Además se puede considerar a un algoritmo como una herramienta
+para resolver problemas computacionales. Junto con las estructuras de datos, los algoritmos son
+considerados como los elementos base que forman los programas computacionales.
+
+Ahora bien, para que un algoritmo sea de utilidad es necesario que éste produzca un resultado
+correcto o, por lo menos, un resultado aproximado cuyo error sea de alguna manera controlable para
+todos los posibles problemas que a este se le puedan suministrar. Adicionalmente, es deseable que
+el algoritmo resuelva dichos problemas en la menor cantidad de pasos posibles para, de esta manera,
+ser más eficiente en cuestión de tiempo. También es importante el cuidado de la cantidad de
+memoria que un algoritmo necesita para su ejecución.
+
+Así pues hemos establecido los principales aspectos del análisis de algoritmos, los cuales son el
+determinar: que produzca resultados correctos o suficientemente aproximados, cuál es el tiempo que
+le toma producir el resultado y cuál es la cantidad de espacio (memoria) que éste utiliza.
+
+Ejemplo 1
+Supongamos que nuestra tarea es la de sumar un número determinado ${n} de números enteros (por
+ejemplo los 5 números enteros 2, 4, 6, 8 y 10.) Por conveniencia supondremos que éstos números
+están almacenados en un arreglo ${A}.
+
+```julia
+    A = [ 2, 4, 6, 8, 10 ]
+```
+
+Si realizamos dicha suma, podemos encontrar que el resultado correcto es 30. Ahora bien, deseamos
+establecer un procedimiento general para el cual, sin importar el tamaño de ${A} o los elementos
+que contenga la computadora produzca el resultado correcto.
+Si consideramos la suma como una operación binaria (entre sólo dos elementos,) para poder obtener
+el resultado es necesario que llevemos la cuenta en una variable adicional la cual llamaremos por
+conveniencia `valor_acumulado`, la cual comenzará en ${0} e irá aumentando con el valor de cada uno
+de los números del arreglo, en nuestro ejemplo: 
+
+```julia
+valor_acumulado = 0
+valor_acumulado += A[1]
+valor_acumulado += A[2]
+valor_acumulado += A[3]
+valor_acumulado += A[4]
+valor_acumulado += A[5]
+valor_acumulado
+```
+
+Con este patrón en mente podemos establecer la función `suma(A)` la cual implementará nuestro
+algoritmo buscado
+
+```julia
+function suma(A)
+    valor_acumulado = 0
+    for elem in A
+        valor_acumulado += elem
+    end
+    return valor_acumulado
+end
+```
+
+aplicada a nuestro ejemplo obtenemos
+
+```julia
+suma(A)
+```
+
+la cual produce el valor correcto para nuestro arreglo ${A}.
+Ahora bien, podríamos preguntar cuánto tiempo le toma a la computadora realizar dicha operación.
+Podríamos obtener este valor de manera práctica mediante:
+
+```julia
+@time
+suma(A)
+```
+
+sin embargo éste valor sólo representa el tiempo que le toma a nuestra computadora condicionada a
+las demás tareas que estaba realizando al momento de ejecución. Aún así obtuvieramos el valor para
+muchos arreglos distintos, en condiciones distintas e hicieramos un estudio estadístico con dichos
+resultados, éstos poco serían de utilidad para determinar el tiempo que le tomaría correr dicho
+algoritmo a otra computadora. Es por esto que es necesario establecer otra manera, más teórica, de
+determinar el costo temporal de un algoritmo.
+
+Comencemos por suponer que todas las computadoras realizan cualquier operación básica en tiempo
+constante ${c}, esto por supuesto no es cierto en el mundo real pero veremos más adelante por qué no
+nos afecta demasiado en nuestro análisis. Además supondremos que las computadoras ejecutan un
+programa línea por línea y no tienen procesos paralelos. A este modelo de computadora se le conoce
+como Máquina de Acceso Aleatorio o RAM (por sus siglas en inglés.)
+
+Bien, pasemos a establecer la cantidad de veces que se ejecuta cada una de las líneas de código en
+nuestra función `suma(A)` para un arreglo ${A} con una cantidad arbitraria de valores `n`.
