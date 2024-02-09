@@ -28,7 +28,7 @@ le toma producir el resultado y cuál es la cantidad de espacio (memoria) que é
 
 # ╔═╡ 634604b3-6284-4b1b-96fe-d67e32b75f9a
 md"## Ejemplo 1. Suma de n números enteros
-### Disenando el algoritmo
+### Diseñando el algoritmo
 Supongamos que nuestra tarea es la de sumar un número determinado _n_ de números enteros (por
 ejemplo los 5 números enteros 2, 4, 6, 8 y 10.) Por conveniencia supondremos que éstos números
 están almacenados en un arreglo **A**"
@@ -80,7 +80,7 @@ suma(A)
 md"la cual produce el valor correcto para nuestro arreglo **A**."
 
 # ╔═╡ d3241642-e125-4a0a-bf43-b59cf646992d
-md"### Costo temporal practico
+md"### Costo temporal práctico
 Ahora bien, podríamos preguntar cuánto tiempo le toma a la computadora realizar dicha operación.
 Es posible obtener este valor de manera práctica mediante el uso del macro _@time_"
 
@@ -96,7 +96,7 @@ algoritmo a otra computadora. Es por esto que es necesario establecer otra maner
 determinar el costo temporal de un algoritmo."
 
 # ╔═╡ e39b8d26-8f75-464b-b03c-a235cdd0c5d9
-md"### Costo temporal teorico
+md"### Costo temporal teórico
 Comencemos por suponer que todas las computadoras realizan cualquier operación básica en tiempo
 constante _c_, esto por supuesto no ocurre en el mundo real pero veremos más adelante porqué no
 nos afecta demasiado en nuestro análisis. Además supondremos que las computadoras ejecutan un
