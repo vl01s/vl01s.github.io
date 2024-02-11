@@ -12,4 +12,4 @@ uso el lenguaje de programación [Julia](https://julialang.org).
 > -- <cite>John D. Carmack</cite>
 
 # Algoritmos desde 0
-* [Introducción a Algoritmos](2024-02-06-introducción-a-algoritmos.htm)
+* [Introducción a Algoritmos](2024-02-06-introducción-a-algoritmos.html)

@@ -67,6 +67,7 @@ md"### Costo temporal práctico
 Ahora bien, podríamos preguntar cuánto tiempo le toma a la computadora realizar dicha operación sobre un arreglo con 10, 100, 1,000, o más números aleatorios. Es de esperarse que el tiempo que le toma a la computadora sea mayor entre más números tenga que sumar pues tiene que realizar un mayor número de operaciones. Por ejemplo para un arreglo con 1,000 números aleatorios es posible obtener el tiempo de ejecución mediante el uso del macro _@time_"
 
 # ╔═╡ 3b59449c-9298-4f9c-8e2c-be41162d7643
+#=╠═╡
 begin
     valor_acumulado = 0
     valor_acumulado += a[1]
@@ -76,14 +77,19 @@ begin
     valor_acumulado += a[5]
     valor_acumulado
 end
+  ╠═╡ =#
 
 # ╔═╡ ef064f6a-1283-49c5-8733-13d0af371e4e
+#=╠═╡
 suma(a)
+  ╠═╡ =#
 
 # ╔═╡ 525fbdb0-43d9-4fb5-982b-61edcbabcd98
+#=╠═╡
 for i in 1:1_000
 	a[i] = floor(rand() * 1_000)
 end
+  ╠═╡ =#
 
 # ╔═╡ bde343bd-cc6d-447e-b309-cb84e2a1c0ee
 @time suma(a)
@@ -125,19 +131,21 @@ md"el tiempo de ejecución es entonces _T(n) = c(2n + 2)_. Donde `c` es la const
 md"## Referencias
 * Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). Introduction to Algorithms, fourth edition. MIT Press."
 
-# ╔═╡ ff0c12dc-6e1f-440d-a352-5353c732c36d
-a = Vector{Int64}(undef, 1_000)
-
 # ╔═╡ aa398f1f-4524-490b-8667-acf551ef1697
 # ╠═╡ disabled = true
 #=╠═╡
 a = [ 2, 4, 6, 8, 10 ]
   ╠═╡ =#
 
+# ╔═╡ ff0c12dc-6e1f-440d-a352-5353c732c36d
+#=╠═╡
+a = Vector{Int64}(undef, 1_000)
+  ╠═╡ =#
+
 # ╔═╡ Cell order:
 # ╟─d0cf9a6c-c557-11ee-229f-b761d1571c63
 # ╟─634604b3-6284-4b1b-96fe-d67e32b75f9a
-# ╟─aa398f1f-4524-490b-8667-acf551ef1697
+# ╠═aa398f1f-4524-490b-8667-acf551ef1697
 # ╟─178e9dc1-44fb-4693-8f4d-8f1ca3475e7f
 # ╠═3b59449c-9298-4f9c-8e2c-be41162d7643
 # ╟─ccc181a2-3bd6-4617-bbd3-c4b0fe264838
