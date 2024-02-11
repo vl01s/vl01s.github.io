@@ -10,3 +10,6 @@ uso el lenguaje de programación [Julia](https://julialang.org).
 > capitalization. You need enough pizza and Diet Coke to stick in your refrigerator, a cheap PC to
 > work on, and the dedication to go through with it."
 > -- <cite>John D. Carmack</cite>
+
+# Algoritmos desde 0
+* [Introducción a Algoritmos](2024-02-06-introducción-a-algoritmos.htm)
