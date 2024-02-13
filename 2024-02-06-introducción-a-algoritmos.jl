@@ -37,9 +37,9 @@ están almacenados en un arreglo **a**"
 a = [2, 4, 6, 8, 10]
 
 # ╔═╡ 178e9dc1-44fb-4693-8f4d-8f1ca3475e7f
-md"Si realizamos dicha suma, podemos encontrar que el resultado correcto es _30_. Ahora bien, deseamos
-establecer un procedimiento general para el cual, sin importar el tamaño de **a** o los elementos
-que contenga la computadora produzca el resultado correcto.
+md"Si realizamos dicha suma, podemos encontrar que el resultado correcto es _30_. Ahora bien,
+deseamos establecer un procedimiento general para el cual, sin importar el tamaño de **a** o los
+elementos que contenga la computadora produzca el resultado correcto.
 
 Si consideramos la suma como una operación binaria (entre dos elementos,) para poder obtener
 la suma total es necesario que llevemos la cuenta en una variable adicional la cual llamaremos por
@@ -81,7 +81,11 @@ md"el cual es el valor correcto para nuestro arreglo **a**."
 
 # ╔═╡ d3241642-e125-4a0a-bf43-b59cf646992d
 md"### Costo temporal práctico
-Ahora bien, podríamos preguntar cuánto tiempo le toma a la computadora realizar dicha operación sobre un arreglo con 10, 100, 1,000, o más números aleatorios. Es de esperarse que el tiempo que le toma a la computadora sea mayor entre más números tenga que sumar pues tiene que realizar un mayor número de operaciones. Por ejemplo para un arreglo con 1,000 números aleatorios es posible obtener el tiempo de ejecución mediante el uso del macro _@time_"
+Ahora bien, podríamos preguntar cuánto tiempo le toma a la computadora realizar dicha operación
+sobre un arreglo con 10, 100, 1,000, o más números aleatorios. Es de esperarse que el tiempo que le
+toma a la computadora sea mayor entre más números tenga que sumar pues tiene que realizar un mayor
+número de operaciones. Por ejemplo para un arreglo con 1,000 números aleatorios es posible obtener
+el tiempo de ejecución mediante el uso del macro _@time_"
 
 # ╔═╡ ff0c12dc-6e1f-440d-a352-5353c732c36d
 b = Vector{Int64}(undef, 1_000)
@@ -95,8 +99,11 @@ end
 @time suma(b)
 
 # ╔═╡ 9bef12ad-74fe-452e-a0e7-d4a5a1113bde
-md"Sin embargo este valor sólo representa el tiempo que le toma a nuestra computadora y está condicionado a
-las demás tareas que estaba ejecutando la computadora al momento de ejecución (por ejemplo, si alguien al momento de ejecutar el código está compilando un programa o renderizando un video es muy probable que la computadora tarde más a si sólo se tiene abierto un editor de texto y un emulador de terminal.)
+md"Sin embargo este valor sólo representa el tiempo que le toma a nuestra computadora y está
+condicionado a las demás tareas que estaba ejecutando la computadora al momento de ejecución (por
+ejemplo, si alguien al momento de ejecutar el código está compilando un programa o renderizando un
+video es muy probable que la computadora tarde más a si sólo se tiene abierto un editor de texto y
+un emulador de terminal.)
 
 Así obtuvieramos el valor para
 muchos arreglos distintos, en condiciones distintas, y elaboraramos un modelo matemático con dichos
@@ -109,8 +116,8 @@ md"### Costo temporal teórico
 Comencemos por suponer que todas las computadoras realizan cualquier operación básica en tiempo
 constante _c_, esto por supuesto no ocurre en el mundo real pero veremos más adelante porqué no
 nos afecta demasiado en nuestro análisis. Además supondremos que las computadoras ejecutan un
-programa secuencialmente (línea por línea y no tienen procesos paralelos.) A este modelo de computadora se le conoce
-como _Máquina de Acceso Aleatorio_ o _RAM_ (por sus siglas en inglés.)
+programa secuencialmente (línea por línea y no tienen procesos paralelos.) A este modelo de
+computadora se le conoce como _Máquina de Acceso Aleatorio_ o _RAM_ (por sus siglas en inglés.)
 
 Bien, pasemos a establecer la cantidad de veces que se ejecuta cada una de las líneas de código en
 nuestra función _suma()_ para un arreglo **A** con una cantidad arbitraria de valores _n_"
@@ -125,11 +132,15 @@ nuestra función _suma()_ para un arreglo **A** con una cantidad arbitraria de v
 #7 end"                             #
 
 # ╔═╡ 8a1cf9cf-8481-435e-8628-5db8a005841e
-md"el tiempo de ejecución es entonces _T(n) = c(2n + 2)_. Donde `c` es la constante mencionada en el párrafo anterior. Esta función es lineal respecto de n y en el próximo post veremos porqué éste hecho es lo más relevante para establecer su costo temporal e introduciremos una notación que nos permitirá expresar dicha relación de una manera formal."
+md"el tiempo de ejecución es entonces _T(n) = c(2n + 2)_. Donde `c` es la constante mencionada en el
+párrafo anterior. Esta función es lineal respecto de n y en el próximo post veremos porqué este
+hecho es lo más relevante para establecer su costo temporal e introduciremos una notación que nos
+permitirá expresar dicha relación de una manera formal."
 
 # ╔═╡ 7c874e16-45b0-457e-bc1f-1c081b35ceee
 md"## Referencias
-* Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). Introduction to Algorithms, fourth edition. MIT Press."
+* Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). Introduction to Algorithms,
+fourth edition. MIT Press."
 
 # ╔═╡ Cell order:
 # ╟─d0cf9a6c-c557-11ee-229f-b761d1571c63
