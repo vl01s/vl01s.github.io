@@ -139,8 +139,7 @@ permitirá expresar dicha relación de una manera formal."
 
 # ╔═╡ 7c874e16-45b0-457e-bc1f-1c081b35ceee
 md"## Referencias
-* Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). Introduction to Algorithms,
-fourth edition. MIT Press."
+* Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). Introduction to Algorithms, fourth edition. MIT Press."
 
 # ╔═╡ Cell order:
 # ╟─d0cf9a6c-c557-11ee-229f-b761d1571c63
