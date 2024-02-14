@@ -1,0 +1,29 @@
+title: "CyberLogic"
+author: "Luis Arturo Ramos Valencia"
+description: "Personal blog about computer science and software engineering."
+
+email: "vluis@protonmail.com"
+github_username: "vl01s"
+# twitter_username: "twitteruser"
+
+theme: "minima"
+
+minima:
+  skin: "auto"
+
+rss: rss
+    
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+defaults:
+  - scope:
+      path: ""
+      type: post
+    values:
+      tags: Other
